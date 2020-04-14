@@ -1,0 +1,11 @@
+pipeline {
+  agent any
+  stages {
+    stage('spin up instance') {
+      steps {
+        sh '/usr/local/bin/aws ec2 start-instances --region us-west-2 --instance-ids i-00cdc276bf60ae34f'
+      }
+    }
+
+  }
+}
