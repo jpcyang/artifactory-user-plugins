@@ -15,7 +15,9 @@ pipeline {
 
       }
       steps {
-        sh 'hostname'
+        sh '''hostname
+pwd
+ls -lFa'''
       }
     }
 
