@@ -7,5 +7,17 @@ pipeline {
       }
     }
 
+    stage('build') {
+      agent {
+        node {
+          label 'jenkins-slave'
+        }
+
+      }
+      steps {
+        sh 'ls'
+      }
+    }
+
   }
 }
